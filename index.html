@@ -2,1861 +2,271 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#102d26">
-<meta name="description" content="Descubre la casa modelo y terrenos disponibles con Elite Inmobiliaria en El Salvador. Villa Lourdes, Quezaltepeque, Kilómetro 5 y playa.">
-<title>Elite Inmobiliaria | El lugar de tus sueños comienza aquí</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --green: #123b31;
-  --green-dark: #0b2821;
-  --green-light: #245647;
-  --gold: #c8a66c;
-  --gold-light: #e5ca98;
-  --cream: #f7f5ef;
-  --white: #fff;
-  --dark: #202a25;
-  --gray: #747d76;
-  --line: #e8e8e1;
-  --shadow: 0 18px 55px rgba(16,45,38,.11);
-  --serif: "Playfair Display", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  font-family: var(--sans);
-  color: var(--dark);
-  overflow-x: hidden;
-  background: white;
-}
-
-body, button, input, select, textarea {
-  font-family: var(--sans);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-.container {
-  width: min(1180px, 88%);
-  margin: auto;
-}
-
-.eyebrow {
-  color: var(--gold);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 19px;
-}
-
-h1, h2, h3 {
-  font-family: var(--serif);
-  font-weight: 500;
-}
-
-.gold {
-  color: var(--gold);
-  font-style: italic;
-}
-
-.btn {
-  min-height: 54px;
-  padding: 0 25px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  transition: .25s ease;
-  text-align: center;
-}
-
-.btn-gold {
-  color: #17251e;
-  background: var(--gold);
-}
-
-.btn-gold:hover {
-  background: var(--gold-light);
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  color: white;
-  border-color: rgba(255,255,255,.6);
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--green);
-}
-
-.btn-green {
-  background: var(--green);
-  color: white;
-}
-
-.btn-green:hover {
-  background: var(--gold);
-  color: var(--green-dark);
-}
-
-/* BARRA SUPERIOR */
-
-.topbar {
-  background: var(--green-dark);
-  color: #e8e8df;
-  padding: 9px 6%;
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-/* NAVEGACIÓN */
-
-.navbar {
-  height: 82px;
-  padding: 0 6%;
-  background: rgba(15,48,39,.97);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 29px;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand strong {
-  font-family: var(--serif);
-  font-size: 23px;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-}
-
-.brand span {
-  font-size: 9px;
-  letter-spacing: 5px;
-  color: var(--gold);
-  margin-top: 7px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 29px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.nav-links a {
-  color: #f0f0ea;
-  transition: .2s;
-}
-
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-.nav-cta {
-  border: 1px solid var(--gold);
-  color: var(--gold) !important;
-  padding: 13px 19px;
-}
-
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 1px solid #ffffff55;
-  color: white;
-  font-size: 23px;
-  padding: 7px 12px;
-}
-
-/* PORTADA */
-
-.hero {
-  min-height: 790px;
-  height: 100vh;
-  max-height: 980px;
-  background:
-    linear-gradient(90deg,
-      rgba(7,27,21,.94) 0%,
-      rgba(7,27,21,.76) 49%,
-      rgba(7,27,21,.22) 100%),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2200&q=90")
-    center/cover no-repeat;
-  color: white;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 150px;
-  background: linear-gradient(transparent, rgba(0,0,0,.18));
-  pointer-events: none;
-}
-
-.hero-content {
-  width: min(1180px, 88%);
-  margin: auto;
-  padding-top: 100px;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-label {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  color: var(--gold-light);
-  font-size: 10px;
-  letter-spacing: 4px;
-  font-weight: 700;
-  margin-bottom: 28px;
-}
-
-.hero-label::before {
-  content: "";
-  width: 40px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.hero h1 {
-  font-size: clamp(48px, 6.5vw, 84px);
-  line-height: 1.08;
-  max-width: 850px;
-  margin-bottom: 25px;
-}
-
-.hero-description {
-  max-width: 570px;
-  color: #e3e8e1;
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 32px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 13px;
-  flex-wrap: wrap;
-}
-
-.hero-proof {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 48px;
-  font-size: 11px;
-  color: #f0f0e8;
-}
-
-.hero-proof span::before {
-  content: "✓";
-  color: var(--gold);
-  font-weight: 900;
-  margin-right: 8px;
-}
-
-/* BANDA DE MENSAJE */
-
-.promise-strip {
-  background: var(--gold);
-  padding: 19px 5%;
-  text-align: center;
-  color: #182d23;
-  font-family: var(--serif);
-  font-size: clamp(17px, 2vw, 22px);
-  font-style: italic;
-}
-
-/* INTRODUCCIÓN */
-
-.intro {
-  padding: 110px 0;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 85px;
-  align-items: center;
-}
-
-.intro-heading h2 {
-  color: var(--green);
-  font-size: clamp(37px, 4.5vw, 58px);
-  line-height: 1.17;
-}
-
-.gold-rule {
-  width: 65px;
-  height: 3px;
-  background: var(--gold);
-  margin-top: 28px;
-}
-
-.intro-copy p {
-  font-size: 14px;
-  color: var(--gray);
-  line-height: 2;
-  margin-bottom: 18px;
-}
-
-.intro-copy strong {
-  color: var(--green);
-}
-
-/* BLOQUE DE NECESIDADES */
-
-.needs {
-  background: var(--cream);
-  padding: 95px 0;
-}
-
-.section-heading {
-  max-width: 760px;
-  text-align: center;
-  margin: 0 auto 50px;
-}
-
-.section-heading h2 {
-  color: var(--green);
-  font-size: clamp(35px, 4vw, 51px);
-  line-height: 1.2;
-}
-
-.section-heading p {
-  color: var(--gray);
-  font-size: 14px;
-  line-height: 1.8;
-  margin-top: 17px;
-}
-
-.needs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.need-card {
-  padding: 34px 28px;
-  background: white;
-  border: 1px solid var(--line);
-  transition: .3s;
-}
-
-.need-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
-}
-
-.need-symbol {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  font-size: 23px;
-  margin-bottom: 23px;
-}
-
-.need-card h3 {
-  color: var(--green);
-  font-size: 23px;
-  margin-bottom: 12px;
-}
-
-.need-card p {
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* CATÁLOGO */
-
-.catalog {
-  padding: 110px 0;
-  background: white;
-}
-
-.catalog .section-heading {
-  margin-bottom: 45px;
-}
-
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 26px;
-}
-
-.property-card {
-  overflow: hidden;
-  background: white;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 38px rgba(15,45,35,.07);
-  transition: .3s;
-}
-
-.property-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
-}
-
-.property-photo {
-  height: 310px;
-  position: relative;
-  overflow: hidden;
-  background: #d8ded7;
-}
-
-.property-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .65s;
-}
-
-.property-card:hover .property-photo img {
-  transform: scale(1.06);
-}
-
-.photo-label {
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  padding: 10px 13px;
-  background: var(--green);
-  color: white;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.property-info {
-  padding: 28px;
-}
-
-.property-category {
-  color: #a18452;
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.property-info h3 {
-  color: var(--green);
-  font-size: 29px;
-  margin-bottom: 12px;
-}
-
-.property-info p {
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 1.85;
-  margin-bottom: 22px;
-}
-
-.property-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  border-top: 1px solid var(--line);
-  padding-top: 19px;
-}
-
-.property-action small {
-  color: var(--gray);
-  font-size: 10px;
-}
-
-.property-action button {
-  border: 0;
-  background: var(--green);
-  color: white;
-  padding: 13px 15px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .5px;
-  transition: .2s;
-}
-
-.property-action button:hover {
-  background: var(--gold);
-  color: var(--green-dark);
-}
-
-/* TARJETA DE PLAYA DESTACADA */
-
-.beach-card {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  background: var(--green);
-  color: white;
-}
-
-.beach-card .property-photo {
-  height: 100%;
-  min-height: 340px;
-}
-
-.beach-card .property-info {
-  padding: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.beach-card .property-info h3 {
-  color: white;
-  font-size: 35px;
-}
-
-.beach-card .property-info p {
-  color: #dce5df;
-}
-
-.beach-card .property-action {
-  border-color: #ffffff33;
-}
-
-.beach-card .property-action small {
-  color: #dce5df;
-}
-
-.beach-card .property-action button {
-  background: var(--gold);
-  color: var(--green-dark);
-}
-
-/* LLAMADO EMOCIONAL */
-
-.dream {
-  padding: 115px 6%;
-  background:
-    linear-gradient(rgba(9,39,30,.91),rgba(9,39,30,.91)),
-    url("https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-  text-align: center;
-  color: white;
-}
-
-.dream h2 {
-  font-size: clamp(37px, 5vw, 60px);
-  max-width: 850px;
-  line-height: 1.2;
-  margin: auto;
-}
-
-.dream p {
-  color: #dce5df;
-  max-width: 650px;
-  margin: 24px auto 30px;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-/* PROCESO */
-
-.process {
-  padding: 105px 0;
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-}
-
-.process-step {
-  text-align: center;
-  padding: 28px;
-}
-
-.step-number {
-  width: 55px;
-  height: 55px;
-  margin: 0 auto 20px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  display: grid;
-  place-items: center;
-  font-family: var(--serif);
-  font-size: 24px;
-}
-
-.process-step h3 {
-  color: var(--green);
-  font-size: 23px;
-  margin-bottom: 12px;
-}
-
-.process-step p {
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* CONTACTO */
-
-.contact {
-  padding: 105px 0;
-  background: var(--green);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 75px;
-  align-items: center;
-}
-
-.contact-copy h2 {
-  color: white;
-  font-size: clamp(38px, 4.5vw, 56px);
-  line-height: 1.18;
-}
-
-.contact-copy > p {
-  color: #d9e3dc;
-  font-size: 14px;
-  line-height: 1.9;
-  margin: 22px 0;
-}
-
-.contact-list {
-  list-style: none;
-  color: #f0f0e9;
-  font-size: 13px;
-  line-height: 2.7;
-}
-
-.contact-list li::before {
-  content: "✓";
-  color: var(--gold);
-  margin-right: 12px;
-}
-
-.contact-box {
-  background: white;
-  padding: 37px;
-  box-shadow: 0 20px 60px #0002;
-}
-
-.contact-box h3 {
-  color: var(--green);
-  font-size: 29px;
-  margin-bottom: 9px;
-}
-
-.contact-box > p {
-  color: var(--gray);
-  font-size: 12px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 13px;
-}
-
-.field {
-  margin-bottom: 16px;
-}
-
-.field label {
-  display: block;
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  min-height: 48px;
-  border: 1px solid #dfe5df;
-  background: #fbfcfa;
-  padding: 13px;
-  font-size: 13px;
-  color: var(--dark);
-  border-radius: 0;
-}
-
-.field textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: 2px solid #c8a66c66;
-  border-color: var(--gold);
-}
-
-.submit {
-  width: 100%;
-  min-height: 55px;
-  border: 0;
-  background: var(--gold);
-  color: var(--green-dark);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  transition: .2s;
-}
-
-.submit:hover {
-  background: var(--gold-light);
-}
-
-.form-hint {
-  color: #89928b;
-  font-size: 10px;
-  line-height: 1.6;
-  margin-top: 13px;
-}
-
-/* PIE */
-
-footer {
-  background: var(--green-dark);
-  color: white;
-  padding: 35px 6%;
-}
-
-.footer-inner {
-  width: min(1180px, 100%);
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-inner small {
-  color: #bfcac1;
-  font-size: 10px;
-}
-
-/* WHATSAPP FLOTANTE */
-
-.whatsapp-float {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 500;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #20b967;
-  color: white;
-  display: grid;
-  place-items: center;
-  font-size: 29px;
-  box-shadow: 0 7px 25px #0003;
-  border: 3px solid white;
-  transition: .2s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.09);
-}
-
-/* ANIMACIONES */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: opacity .7s ease, transform .7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* RESPONSIVE TABLET */
-
-@media(max-width: 900px) {
-  .container {
-    width: 90%;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-
-  .intro-grid,
-  .contact-grid {
-    gap: 40px;
-  }
-
-  .property-photo {
-    height: 260px;
-  }
-
-  .beach-card .property-photo {
-    min-height: 300px;
-  }
-}
-
-/* RESPONSIVE CELULAR */
-
-@media(max-width: 680px) {
-  html {
-    scroll-padding-top: 75px;
-  }
-
-  .topbar {
-    font-size: 9px;
-    padding: 8px 3%;
-  }
-
-  .navbar {
-    height: 72px;
-    top: 27px;
-    padding: 0 5%;
-  }
-
-  .brand strong {
-    font-size: 18px;
-  }
-
-  .brand span {
-    font-size: 8px;
-    letter-spacing: 4px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 72px;
-    width: 100%;
-    padding: 20px 6%;
-    background: var(--green-dark);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    box-shadow: 0 15px 20px #0002;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 15px 0;
-    border-bottom: 1px solid #ffffff18;
-  }
-
-  .nav-links .nav-cta {
-    margin-top: 12px;
-    text-align: center;
-    padding: 14px;
-  }
-
-  .hero {
-    height: auto;
-    min-height: 760px;
-    background-position: 58% center;
-  }
-
-  .hero-content {
-    width: 88%;
-    padding-top: 130px;
-    padding-bottom: 65px;
-  }
-
-  .hero-label {
-    font-size: 9px;
-    letter-spacing: 2px;
-    margin-bottom: 23px;
-  }
-
-  .hero h1 {
-    font-size: clamp(43px, 12vw, 59px);
-    line-height: 1.1;
-  }
-
-  .hero-description {
-    font-size: 13px;
-    line-height: 1.8;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .hero-proof {
-    gap: 13px;
-    flex-direction: column;
-    margin-top: 30px;
-  }
-
-  .promise-strip {
-    font-size: 17px;
-    line-height: 1.5;
-    padding: 17px 6%;
-  }
-
-  .intro,
-  .catalog,
-  .process {
-    padding: 75px 0;
-  }
-
-  .needs {
-    padding: 75px 0;
-  }
-
-  .intro-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .intro-heading h2,
-  .section-heading h2 {
-    font-size: 38px;
-  }
-
-  .intro-copy p {
-    font-size: 13px;
-  }
-
-  .needs-grid,
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .need-card {
-    padding: 25px;
-  }
-
-  .section-heading {
-    margin-bottom: 35px;
-  }
-
-  .section-heading p {
-    font-size: 13px;
-  }
-
-  .catalog-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .property-photo {
-    height: 245px;
-  }
-
-  .property-info {
-    padding: 23px;
-  }
-
-  .property-info h3 {
-    font-size: 26px;
-  }
-
-  .property-info p {
-    font-size: 12px;
-  }
-
-  .property-action {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .property-action button {
-    width: 100%;
-    min-height: 46px;
-  }
-
-  .beach-card {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .beach-card .property-photo {
-    min-height: 230px;
-    height: 230px;
-  }
-
-  .beach-card .property-info {
-    padding: 27px;
-  }
-
-  .beach-card .property-info h3 {
-    font-size: 30px;
-  }
-
-  .dream {
-    padding: 85px 6%;
-  }
-
-  .dream h2 {
-    font-size: 39px;
-  }
-
-  .dream p {
-    font-size: 13px;
-  }
-
-  .process-step {
-    padding: 20px;
-  }
-
-  .contact {
-    padding: 75px 0;
-  }
-
-  .contact-copy h2 {
-    font-size: 40px;
-  }
-
-  .contact-box {
-    padding: 24px 19px;
-  }
-
-  .contact-box h3 {
-    font-size: 26px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .field input,
-  .field select,
-  .field textarea {
-    font-size: 16px;
-  }
-
-  .submit {
-    min-height: 56px;
-    font-size: 10px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .whatsapp-float {
-    width: 56px;
-    height: 56px;
-    right: 15px;
-    bottom: 15px;
-  }
-}
-
-@media(prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  * {
-    transition-duration: .01ms !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra el terreno o la casa que estás buscando. Conoce nuestras opciones inmobiliarias en El Salvador.">
+  <meta name="theme-color" content="#102b25">
+  <title>Elite Inmobiliaria | Tu futuro comienza aquí</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-
-
-<header class="navbar">
-  <a href="#inicio" class="brand">
-    <strong>ELITE INMOBILIARIA</strong>
-    <span>EL SALVADOR</span>
-  </a>
-
-  <button class="menu-toggle" id="menuToggle"
-    aria-label="Abrir menú" aria-expanded="false"
-    aria-controls="navLinks">☰</button>
-
-  <nav class="nav-links" id="navLinks">
-    <a href="#inicio">Inicio</a>
-    <a href="#nosotros">Nuestra visión</a>
-    <a href="#propiedades">Propiedades</a>
-    <a href="#contacto" class="nav-cta">Solicitar información</a>
-  </nav>
-</header>
-
-<main>
-
-<!-- PORTADA PRINCIPAL -->
-
-<section class="hero" id="inicio">
-  <div class="hero-content">
-
-    <span class="hero-label">ELITE INMOBILIARIA · EL SALVADOR</span>
-
-    <h1>
-      No estás buscando
-      solamente un terreno.
-      Estás buscando
-      <span class="gold">un futuro.</span>
-    </h1>
-
-    <p class="hero-description">
-      Imagina tener un espacio propio, construir el hogar
-      que siempre has querido o encontrar ese lugar especial
-      para tus próximos proyectos. Conoce nuestra casa modelo
-      y terrenos disponibles en diferentes ubicaciones.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#propiedades" class="btn btn-gold">
-        QUIERO ENCONTRAR MI LUGAR →
-      </a>
-
-      <a href="#contacto" class="btn btn-outline">
-        HABLAR CON UN ASESOR
-      </a>
-    </div>
-
-    <div class="hero-proof">
-      <span>Casa modelo</span>
-      <span>Terrenos en distintas ubicaciones</span>
-      <span>Atención personalizada</span>
-    </div>
-
-  </div>
-</section>
-
-<div class="promise-strip">
-  “Todo gran proyecto comienza con la decisión de dar el primer paso.”
-</div>
-
-<!-- PRESENTACIÓN -->
-
-<section class="intro" id="nosotros">
-  <div class="container intro-grid">
-
-    <div class="intro-heading reveal">
-      <span class="eyebrow">UNA DECISIÓN PARA TU FUTURO</span>
-      <h2>
-        El espacio que buscas
-        puede convertirse en
-        <span class="gold">tu gran historia.</span>
-      </h2>
-      <div class="gold-rule"></div>
-    </div>
-
-    <div class="intro-copy reveal">
-      <p>
-        Hay decisiones que representan mucho más que una compra.
-        Comprar un terreno puede ser el primer paso para construir
-        una casa, crear un patrimonio o preparar un proyecto para
-        el futuro.
-      </p>
-
-      <p>
-        En <strong>Elite Inmobiliaria</strong> queremos ayudarte
-        a conocer nuestras opciones: una casa modelo y terrenos
-        en Villa Lourdes, Quezaltepeque, Kilómetro 5 y la playa.
-      </p>
-
-      <p>
-        No importa si apenas estás comenzando a buscar.
-        Cuéntanos qué tienes en mente y te orientaremos para
-        que conozcas las alternativas disponibles.
-      </p>
-
-      <a href="#propiedades" class="btn btn-green">
-        DESCUBRIR LAS OPCIONES →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONECTAR CON LO QUE BUSCA EL CLIENTE -->
-
-<section class="needs">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span class="eyebrow">¿QUÉ ESTÁS SOÑANDO?</span>
-      <h2>
-        Cada persona busca un lugar
-        por una <span class="gold">razón especial.</span>
-      </h2>
-      <p>
-        Tal vez una de estas razones se parece a la tuya.
-        Encuentra la opción que conecta con tus planes.
-      </p>
-    </div>
-
-    <div class="needs-grid">
-
-      <article class="need-card reveal">
-        <div class="need-symbol">⌂</div>
-        <h3>Quiero construir mi hogar</h3>
-        <p>
-          Imagina elegir tu propio espacio, planificar tu casa
-          y construir poco a poco ese lugar al que siempre
-          quieras regresar.
-        </p>
-      </article>
-
-      <article class="need-card reveal">
-        <div class="need-symbol">♡</div>
-        <h3>Quiero algo para mi familia</h3>
-        <p>
-          Un espacio propio puede representar nuevos comienzos,
-          recuerdos familiares y proyectos que crecen con el tiempo.
-        </p>
-      </article>
-
-      <article class="need-card reveal">
-        <div class="need-symbol">◇</div>
-        <h3>Quiero una oportunidad</h3>
-        <p>
-          Conoce alternativas de terrenos para evaluar si alguna
-          se adapta a tus planes personales o de inversión.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- CATÁLOGO DE PROPIEDADES -->
-
-<section class="catalog" id="propiedades">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span class="eyebrow">CONOCE NUESTRAS OPCIONES</span>
-      <h2>
-        Tu próximo lugar
-        podría estar <span class="gold">aquí.</span>
-      </h2>
-      <p>
-        Explora nuestras ubicaciones. Si alguna te interesa,
-        solicita información y conoce sus características,
-        disponibilidad y condiciones.
-      </p>
-    </div>
-
-    <div class="catalog-grid">
-
-      <!-- CASA MODELO -->
-
-      <article class="property-card reveal">
-        <div class="property-photo">
-          <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
-            alt="Imagen ilustrativa de una casa modelo"
-            loading="lazy">
-          <span class="photo-label">CASA MODELO</span>
-        </div>
-
-        <div class="property-info">
-          <div class="property-category">01 · VIVIENDA</div>
-          <h3>Casa modelo</h3>
-          <p>
-            ¿Estás buscando una casa para comenzar una nueva etapa?
-            Conoce nuestra casa modelo y consulta sus características
-            y disponibilidad.
-          </p>
-
-          <div class="property-action">
-            <small>Consulta los detalles de esta opción.</small>
-            <button type="button" data-property="Casa modelo">
-              CONOCER ESTA CASA →
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- VILLA LOURDES -->
-
-      <article class="property-card reveal">
-        <div class="property-photo">
-          <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85"
-            alt="Imagen ilustrativa de un terreno"
-            loading="lazy">
-          <span class="photo-label">TERRENOS</span>
-        </div>
-
-        <div class="property-info">
-          <div class="property-category">02 · VILLA LOURDES</div>
-          <h3>Terrenos en Villa Lourdes</h3>
-          <p>
-            Quizás aquí comienza ese proyecto que llevas tiempo
-            imaginando. Pregunta por los terrenos disponibles
-            en Villa Lourdes.
-          </p>
-
-          <div class="property-action">
-            <small>Solicita ubicación y disponibilidad.</small>
-            <button type="button" data-property="Terrenos en Villa Lourdes">
-              ME INTERESA →
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- QUEZALTEPEQUE -->
-
-      <article class="property-card reveal">
-        <div class="property-photo">
-          <img
-            src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=85"
-            alt="Imagen ilustrativa de un terreno"
-            loading="lazy">
-          <span class="photo-label">TERRENOS</span>
-        </div>
-
-        <div class="property-info">
-          <div class="property-category">03 · QUEZALTEPEQUE</div>
-          <h3>Terrenos en Quezaltepeque</h3>
-          <p>
-            Conoce nuestras opciones en Quezaltepeque.
-            Solicita información y descubre si alguna
-            se ajusta a lo que estás buscando.
-          </p>
-
-          <div class="property-action">
-            <small>Consulta las opciones disponibles.</small>
-            <button type="button" data-property="Terrenos en Quezaltepeque">
-              QUIERO INFORMACIÓN →
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- KILÓMETRO 5 -->
-
-      <article class="property-card reveal">
-        <div class="property-photo">
-          <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
-            alt="Imagen ilustrativa de un terreno"
-            loading="lazy">
-          <span class="photo-label">TERRENOS</span>
-        </div>
-
-        <div class="property-info">
-          <div class="property-category">04 · KILÓMETRO 5</div>
-          <h3>Terrenos en Kilómetro 5</h3>
-          <p>
-            Tal vez el lugar que necesitas está más cerca
-            de lo que imaginas. Consulta por nuestras opciones
-            en Kilómetro 5.
-          </p>
-
-          <div class="property-action">
-            <small>Pregunta por esta ubicación.</small>
-            <button type="button" data-property="Terrenos en Kilómetro 5">
-              CONSULTAR AHORA →
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- PLAYA DESTACADA -->
-
-      <article class="property-card beach-card reveal">
-        <div class="property-photo">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=90"
-            alt="Imagen ilustrativa de una playa"
-            loading="lazy">
-          <span class="photo-label">TERRENOS EN LA PLAYA</span>
-        </div>
-
-        <div class="property-info">
-          <div class="property-category">05 · CERCA DEL MAR</div>
-          <h3>¿Y si tu próximo terreno está junto al mar?</h3>
-          <p>
-            Imagina tener un espacio para tus proyectos,
-            disfrutar de nuevos momentos y explorar la posibilidad
-            de contar con un lugar cerca de la playa.
-            Conoce nuestras opciones disponibles.
-          </p>
-
-          <div class="property-action">
-            <small>Solicita información de los terrenos en la playa.</small>
-            <button type="button" data-property="Terrenos en la playa">
-              QUIERO CONOCERLOS →
-            </button>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- MENSAJE DE VENTA EMOCIONAL -->
-
-<section class="dream">
-  <div class="container reveal">
-    <span class="eyebrow">EL FUTURO SE CONSTRUYE CON DECISIONES</span>
-
-    <h2>
-      Un día puedes mirar atrás
-      y recordar que todo comenzó
-      con <span class="gold">un terreno.</span>
-    </h2>
-
-    <p>
-      No tienes que tener todo resuelto para comenzar a buscar.
-      El primer paso puede ser tan sencillo como conocer una opción,
-      hacer una pregunta y descubrir nuevas posibilidades.
-    </p>
-
-    <a href="#contacto" class="btn btn-gold">
-      QUIERO DAR EL PRIMER PASO →
+  <header class="header">
+    <a class="logo" href="#inicio">
+      <span class="logo-icon">E</span>
+      <span>ELITE <small>INMOBILIARIA</small></span>
     </a>
-  </div>
-</section>
 
-<!-- CÓMO FUNCIONA -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-<section class="process">
-  <div class="container">
+    <nav class="nav" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#propiedades">Propiedades</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#proceso">Cómo comprar</a>
+      <a class="nav-contact" href="#contacto">Contáctanos</a>
+    </nav>
+  </header>
 
-    <div class="section-heading reveal">
-      <span class="eyebrow">ES FÁCIL COMENZAR</span>
-      <h2>
-        Tu búsqueda puede comenzar
-        con <span class="gold">tres pasos.</span>
-      </h2>
-    </div>
-
-    <div class="process-grid">
-
-      <article class="process-step reveal">
-        <div class="step-number">1</div>
-        <h3>Elige una opción</h3>
+  <main>
+    <section class="hero" id="inicio">
+      <!-- Cambia esta imagen de muestra por una fotografía real de tus propiedades -->
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow">EL LUGAR DONDE COMIENZA TU HISTORIA</span>
+        <h1>El futuro que sueñas<br>puede comenzar <em>aquí.</em></h1>
         <p>
-          Explora la casa modelo y los terrenos
-          en nuestras diferentes ubicaciones.
+          Un terreno puede convertirse en tu hogar, en el patrimonio de tu familia
+          o en una oportunidad para construir algo propio.
         </p>
-      </article>
+        <div class="hero-actions">
+          <a href="#propiedades" class="btn btn-gold">Descubrir propiedades <span>→</span></a>
+          <a href="#contacto" class="btn btn-outline">Quiero asesoría</a>
+        </div>
+        <div class="hero-note">Tu próxima gran decisión merece el lugar correcto.</div>
+      </div>
+      <a class="scroll-down" href="#propiedades">DESCUBRIR <span>↓</span></a>
+    </section>
 
-      <article class="process-step reveal">
-        <div class="step-number">2</div>
-        <h3>Solicita información</h3>
-        <p>
-          Escríbenos por WhatsApp y cuéntanos
-          qué propiedad te interesa.
-        </p>
-      </article>
-
-      <article class="process-step reveal">
-        <div class="step-number">3</div>
-        <h3>Conoce los detalles</h3>
-        <p>
-          Consulta características, ubicación,
-          disponibilidad y condiciones antes de decidir.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-
-<section class="contact" id="contacto">
-  <div class="container contact-grid">
-
-    <div class="contact-copy reveal">
-      <span class="eyebrow">HABLEMOS DE TU PRÓXIMO PROYECTO</span>
-
-      <h2>
-        El lugar que buscas
-        podría estar
-        <span class="gold">esperándote.</span>
-      </h2>
-
-      <p>
-        Cuéntanos qué tienes en mente.
-        Queremos ayudarte a conocer nuestras opciones
-        y brindarte información para que puedas tomar
-        una decisión con mayor claridad.
+    <section class="intro section" id="nosotros">
+      <div class="section-kicker">MÁS QUE UN TERRENO</div>
+      <h2>No se trata solamente de comprar tierra.<br><em>Se trata de lo que puedes construir en ella.</em></h2>
+      <p class="intro-text">
+        Tal vez estás buscando el espacio para construir tu casa.
+        Quizás quieres darle a tu familia un lugar propio o estás pensando
+        en una oportunidad de inversión. Queremos ayudarte a conocer
+        las opciones disponibles y encontrar la que se ajuste a tus planes.
       </p>
+    </section>
 
-      <ul class="contact-list">
-        <li>Casa modelo</li>
-        <li>Terrenos en Villa Lourdes</li>
-        <li>Terrenos en Quezaltepeque</li>
-        <li>Terrenos en Kilómetro 5</li>
-        <li>Terrenos en la playa</li>
-      </ul>
-    </div>
+    <section class="properties section" id="propiedades">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">OPCIONES PARA TU FUTURO</div>
+          <h2>Encuentra tu próximo <em>lugar.</em></h2>
+        </div>
+        <p>Conoce nuestras opciones y solicita información de la propiedad que te interesa.</p>
+      </div>
 
-    <div class="contact-box reveal">
-      <h3>Cuéntanos qué estás buscando</h3>
-      <p>
-        Completa estos datos y prepararemos tu mensaje
-        para que puedas comunicarte con Elite Inmobiliaria.
-      </p>
+      <div class="property-grid">
 
-      <form id="contactForm">
-
-        <div class="form-row">
-          <div class="field">
-            <label for="nombre">TU NOMBRE *</label>
-            <input id="nombre" name="nombre" type="text"
-              placeholder="Nombre completo" maxlength="100"
-              autocomplete="name" required>
+        <article class="property-card property-featured">
+          <!-- Imagen ilustrativa: sustituir por fotografía real de la casa modelo -->
+          <div class="property-image" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85')">
+            <span class="property-tag">CASA MODELO</span>
           </div>
-
-          <div class="field">
-            <label for="telefono">TU TELÉFONO *</label>
-            <input id="telefono" name="telefono" type="tel"
-              placeholder="Número de contacto" maxlength="25"
-              autocomplete="tel" required>
+          <div class="property-info">
+            <span class="property-category">CONOCE NUESTRO MODELO</span>
+            <h3>Casa modelo</h3>
+            <p>Conoce nuestro modelo de vivienda y solicita información para descubrir sus características.</p>
+            <button class="property-link" data-property="Casa modelo">Solicitar información <span>→</span></button>
           </div>
+        </article>
+
+        <article class="property-card">
+          <!-- Imagen ilustrativa: sustituir por fotografía real de Villa Lourdes -->
+          <div class="property-image" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85')">
+            <span class="property-tag">TERRENOS</span>
+          </div>
+          <div class="property-info">
+            <span class="property-category">UNA OPCIÓN PARA CONOCER</span>
+            <h3>Villa Lourdes</h3>
+            <p>Conoce las opciones de terrenos disponibles en Villa Lourdes.</p>
+            <button class="property-link" data-property="Terrenos en Villa Lourdes">Solicitar información <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <!-- Imagen ilustrativa: sustituir por fotografía real de Quezaltepeque -->
+          <div class="property-image" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1000&q=85')">
+            <span class="property-tag">TERRENOS</span>
+          </div>
+          <div class="property-info">
+            <span class="property-category">HAZ REALIDAD TUS PLANES</span>
+            <h3>Quezaltepeque</h3>
+            <p>Solicita detalles sobre nuestros terrenos en Quezaltepeque.</p>
+            <button class="property-link" data-property="Terrenos en Quezaltepeque">Solicitar información <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <!-- Imagen ilustrativa: sustituir por fotografía real de Kilómetro 5 -->
+          <div class="property-image" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85')">
+            <span class="property-tag">TERRENOS</span>
+          </div>
+          <div class="property-info">
+            <span class="property-category">UNA NUEVA POSIBILIDAD</span>
+            <h3>Kilómetro 5</h3>
+            <p>Conoce la información de los terrenos disponibles en Kilómetro 5.</p>
+            <button class="property-link" data-property="Terrenos en Kilómetro 5">Solicitar información <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <!-- Imagen ilustrativa: sustituir por fotografía real de los terrenos de playa -->
+          <div class="property-image" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85')">
+            <span class="property-tag">TERRENOS</span>
+          </div>
+          <div class="property-info">
+            <span class="property-category">CERCA DE LA PLAYA</span>
+            <h3>Terrenos en la playa</h3>
+            <p>Descubre nuestras opciones de terrenos en la zona de playa.</p>
+            <button class="property-link" data-property="Terrenos en la playa">Solicitar información <span>→</span></button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="emotional-banner">
+      <div class="banner-content">
+        <span class="section-kicker">TU HISTORIA MERECE UN COMIENZO</span>
+        <h2>Un día vas a mirar atrás<br>y agradecer haber <em>comenzado.</em></h2>
+        <p>Ese espacio que hoy estás buscando podría ser el primer paso de algo extraordinario.</p>
+        <a href="#contacto" class="btn btn-gold">Quiero dar el primer paso <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="process section" id="proceso">
+      <div class="section-kicker">TE ACOMPAÑAMOS</div>
+      <h2>Comenzar es más sencillo<br>de lo que <em>imaginas.</em></h2>
+
+      <div class="process-grid">
+        <div class="process-item">
+          <span class="process-number">01</span>
+          <h3>Elige una opción</h3>
+          <p>Explora las propiedades y encuentra la que te interesa conocer.</p>
         </div>
-
-        <div class="field">
-          <label for="propiedad">¿QUÉ PROPIEDAD TE INTERESA? *</label>
-          <select id="propiedad" name="propiedad" required>
-            <option value="">Selecciona una opción</option>
-            <option>Casa modelo</option>
-            <option>Terrenos en Villa Lourdes</option>
-            <option>Terrenos en Quezaltepeque</option>
-            <option>Terrenos en Kilómetro 5</option>
-            <option>Terrenos en la playa</option>
-            <option>Quiero conocer todas las opciones</option>
-          </select>
+        <div class="process-item">
+          <span class="process-number">02</span>
+          <h3>Solicita información</h3>
+          <p>Escríbenos para consultar precios, medidas, ubicación y condiciones disponibles.</p>
         </div>
-
-        <div class="field">
-          <label for="objetivo">¿QUÉ TE GUSTARÍA HACER?</label>
-          <select id="objetivo" name="objetivo">
-            <option>Construir mi hogar</option>
-            <option>Encontrar un espacio para mi familia</option>
-            <option>Comprar un terreno</option>
-            <option>Evaluar una inversión</option>
-            <option>Buscar un lugar cerca de la playa</option>
-            <option>Conocer las opciones primero</option>
-          </select>
+        <div class="process-item">
+          <span class="process-number">03</span>
+          <h3>Conoce los detalles</h3>
+          <p>Revisa la información y consulta la posibilidad de coordinar una visita.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="field">
-          <label for="mensaje">¿QUÉ TE GUSTARÍA SABER?</label>
-          <textarea id="mensaje" name="mensaje"
-            placeholder="Escribe aquí tus dudas o lo que estás buscando..."></textarea>
-        </div>
+    <section class="faq section">
+      <div class="section-kicker">QUEREMOS QUE DECIDAS CON CONFIANZA</div>
+      <h2>Preguntas <em>frecuentes.</em></h2>
 
-        <button class="submit" type="submit">
-          ENVIAR MI CONSULTA POR WHATSAPP →
-        </button>
+      <div class="faq-list">
+        <details>
+          <summary>¿Cómo puedo conocer la ubicación exacta?</summary>
+          <p>Escríbenos indicando la propiedad que te interesa y solicita su ubicación y referencias disponibles.</p>
+        </details>
+        <details>
+          <summary>¿Puedo conocer el precio y las medidas?</summary>
+          <p>Claro. Contáctanos para solicitar los precios, medidas y características actualizadas de cada opción.</p>
+        </details>
+        <details>
+          <summary>¿Puedo visitar el terreno?</summary>
+          <p>Consulta con nuestro equipo la posibilidad de coordinar una visita y conocer el lugar.</p>
+        </details>
+        <details>
+          <summary>¿Cómo puedo recibir más información?</summary>
+          <p>Puedes escribirnos por WhatsApp o completar el formulario de contacto de esta página.</p>
+        </details>
+      </div>
+    </section>
 
-        <p class="form-hint">
-          WhatsApp se abrirá con tu mensaje preparado.
-          Podrás revisarlo antes de enviarlo.
-        </p>
+    <section class="contact-section" id="contacto">
+      <div class="contact-copy">
+        <div class="section-kicker">ESTAMOS PARA AYUDARTE</div>
+        <h2>Cuéntanos qué<br>estás <em>buscando.</em></h2>
+        <p>Déjanos tus datos y la propiedad que te interesa. Nuestro equipo podrá atender tu consulta.</p>
+        <div class="contact-promise">Una conversación puede ser el comienzo de un gran proyecto.</div>
+      </div>
 
+      <form class="contact-form" id="contactForm">
+        <label for="name">Tu nombre</label>
+        <input id="name" name="name" type="text" placeholder="Escribe tu nombre" required>
+
+        <label for="phone">Tu teléfono</label>
+        <input id="phone" name="phone" type="tel" placeholder="Tu número de contacto" required>
+
+        <label for="interest">¿Qué propiedad te interesa?</label>
+        <select id="interest" name="interest" required>
+          <option value="">Selecciona una opción</option>
+          <option>Casa modelo</option>
+          <option>Terrenos en Villa Lourdes</option>
+          <option>Terrenos en Quezaltepeque</option>
+          <option>Terrenos en Kilómetro 5</option>
+          <option>Terrenos en la playa</option>
+          <option>Quiero conocer todas las opciones</option>
+        </select>
+
+        <label for="goal">¿Qué deseas hacer?</label>
+        <select id="goal" name="goal">
+          <option value="">Selecciona tu objetivo</option>
+          <option>Construir mi casa</option>
+          <option>Comprar para mi familia</option>
+          <option>Invertir</option>
+          <option>Conocer oportunidades</option>
+        </select>
+
+        <label for="message">Cuéntanos un poco más (opcional)</label>
+        <textarea id="message" name="message" rows="3" placeholder="¿Qué te gustaría saber?"></textarea>
+
+        <button class="btn btn-gold form-submit" type="submit">Enviar consulta por WhatsApp <span>→</span></button>
+        <small class="form-note">Al enviar, se abrirá WhatsApp con tu consulta preparada.</small>
       </form>
-    </div>
+    </section>
+  </main>
 
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <a href="#inicio" class="brand">
-      <strong>ELITE INMOBILIARIA</strong>
-      <span>EL SALVADOR</span>
+  <footer class="footer">
+    <a class="logo footer-logo" href="#inicio">
+      <span class="logo-icon">E</span>
+      <span>ELITE <small>INMOBILIARIA</small></span>
     </a>
+    <p>El lugar correcto puede cambiar tu historia.</p>
+    <span class="copyright">© <span id="year"></span> Elite Inmobiliaria. Todos los derechos reservados.</span>
+  </footer>
 
-    <small>
-      © <span id="year"></span> Elite Inmobiliaria.
-      Todos los derechos reservados.
-    </small>
+  <!-- Burbujas flotantes de redes sociales -->
+  <div class="social-floats" aria-label="Redes sociales">
+    <a class="social-bubble facebook" href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <span>f</span>
+    </a>
+    <a class="social-bubble instagram" href="https://www.instagram.com/TU_PERFIL/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" class="fill"/></svg>
+    </a>
+    <a class="social-bubble whatsapp" id="whatsappBubble" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.8Z"/><path d="M9 8.5c.3-.5.6-.5.9-.5h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.4.7 1 1.3 1.7 1.7.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-1-.1-2.2-.7-3.4-1.7-1.3-1.1-2.2-2.5-2.5-3.5-.3-1 .1-2.1.7-2.6Z"/></svg>
+    </a>
   </div>
-</footer>
 
-<a href="#" id="whatsappFloat" class="whatsapp-float"
-   aria-label="Contactar por WhatsApp">☎</a>
-
-<script>
-/* =====================================
-   CONFIGURACIÓN PRINCIPAL
-===================================== */
-
-/*
-  IMPORTANTE:
-  Cambia el número por el WhatsApp real.
-
-  Ejemplo de formato salvadoreño:
-  503XXXXXXXX
-
-  Sin +, espacios ni guiones.
-*/
-
-const WHATSAPP_NUMBER = "50300000000";
-
-
-/* =====================================
-   FUNCIONES GENERALES
-===================================== */
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-function numeroConfigurado() {
-  return /^\d{8,15}$/.test(WHATSAPP_NUMBER) &&
-         WHATSAPP_NUMBER !== "50300000000";
-}
-
-function abrirWhatsApp(mensaje) {
-  if (!numeroConfigurado()) {
-    alert(
-      "Antes de publicar la página, configura el número real de WhatsApp de Elite Inmobiliaria en el código."
-    );
-    return;
-  }
-
-  const url =
-    "https://wa.me/" +
-    WHATSAPP_NUMBER +
-    "?text=" +
-    encodeURIComponent(mensaje);
-
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
-
-/* =====================================
-   MENÚ MÓVIL
-===================================== */
-
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.addEventListener("click", () => {
-  const abierto = navLinks.classList.toggle("open");
-
-  menuToggle.setAttribute("aria-expanded", String(abierto));
-  menuToggle.textContent = abierto ? "✕" : "☰";
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  });
-});
-
-
-/* =====================================
-   CONSULTAS DESDE LAS TARJETAS
-===================================== */
-
-document.querySelectorAll("[data-property]").forEach(button => {
-  button.addEventListener("click", () => {
-    const propiedad = button.dataset.property;
-
-    const mensaje =
-`¡Hola, Elite Inmobiliaria!
-
-Vi su página web y me interesa conocer más información.
-
-PROPIEDAD DE MI INTERÉS:
-${propiedad}
-
-Me gustaría conocer:
-
-- Ubicación
-- Características
-- Disponibilidad
-- Precio y condiciones de compra
-
-¿Podrían ayudarme con información, por favor?
-
-Muchas gracias.`;
-
-    abrirWhatsApp(mensaje);
-  });
-});
-
-
-/* =====================================
-   FORMULARIO DE CONTACTO
-===================================== */
-
-document.getElementById("contactForm").addEventListener("submit", event => {
-  event.preventDefault();
-
-  const nombre =
-    document.getElementById("nombre").value.trim();
-
-  const telefono =
-    document.getElementById("telefono").value.trim();
-
-  const propiedad =
-    document.getElementById("propiedad").value;
-
-  const objetivo =
-    document.getElementById("objetivo").value;
-
-  const mensajeCliente =
-    document.getElementById("mensaje").value.trim();
-
-  if (!nombre || !telefono || !propiedad) {
-    alert("Completa tu nombre, teléfono y propiedad de interés.");
-    return;
-  }
-
-  const mensaje =
-`¡Hola, Elite Inmobiliaria!
-
-Estoy interesado/a en recibir información sobre sus propiedades.
-
-DATOS DEL CLIENTE
-Nombre: ${nombre}
-Teléfono: ${telefono}
-
-PROPIEDAD DE INTERÉS
-${propiedad}
-
-MI OBJETIVO
-${objetivo}
-
-MENSAJE
-${mensajeCliente || "Me gustaría conocer más información sobre esta propiedad."}
-
-Por favor, quisiera conocer ubicación, características, disponibilidad, precio y condiciones.
-
-¡Muchas gracias!`;
-
-  abrirWhatsApp(mensaje);
-});
-
-
-/* =====================================
-   WHATSAPP FLOTANTE
-===================================== */
-
-document.getElementById("whatsappFloat").addEventListener("click", event => {
-  event.preventDefault();
-
-  abrirWhatsApp(
-    "¡Hola, Elite Inmobiliaria! Visité su página web y quisiera conocer más información sobre la casa modelo y los terrenos disponibles."
-  );
-});
-
-
-/* =====================================
-   ANIMACIONES AL DESPLAZARSE
-===================================== */
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll(".reveal").forEach(element => {
-    observer.observe(element);
-  });
-} else {
-  document.querySelectorAll(".reveal").forEach(element => {
-    element.classList.add("visible");
-  });
-}
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
