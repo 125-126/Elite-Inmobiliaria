@@ -1,11 +1,11 @@
 
 /*
   CONFIGURACIÓN GENERAL
-  Sustituye estos datos por los enlaces y el número reales.
+  Elite Inmobiliaria - El Salvador
 */
 
 const CONFIG = {
-  whatsapp: "50300000000",
+  whatsapp: "50360014234",
   mensajeInicial: "Hola, deseo recibir información sobre sus propiedades."
 };
 
@@ -29,18 +29,13 @@ if (menuToggle && navMenu) {
 
 // Preparar enlace de WhatsApp
 function abrirWhatsApp(mensaje) {
-  if (CONFIG.whatsapp === "50300000000") {
-    alert("Primero debes colocar tu número real de WhatsApp en el archivo js/script.js");
-    return;
-  }
-
   const numero = CONFIG.whatsapp.replace(/\D/g, "");
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
-// Burbujas flotantes de WhatsApp
+// Burbuja flotante de WhatsApp
 const whatsappBubble = document.getElementById("whatsappBubble");
 
 if (whatsappBubble) {
@@ -56,7 +51,7 @@ document.querySelectorAll(".property-link").forEach(button => {
     const propiedad = button.dataset.property;
 
     const mensaje =
-      `Hola, deseo recibir información sobre: ${propiedad}. ` +
+      `Hola, deseo recibir información sobre: ${propiedad}.\n` +
       "Me gustaría conocer el precio, las medidas, la ubicación y las condiciones disponibles.";
 
     abrirWhatsApp(mensaje);
@@ -92,7 +87,7 @@ if (contactForm) {
   });
 }
 
-// Año automático en el pie de página
+// Año automático
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
