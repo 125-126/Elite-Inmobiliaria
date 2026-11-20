@@ -1,15 +1,27 @@
 
 /*
+  ELITE INMOBILIARIA
   CONFIGURACIÓN GENERAL
-  Elite Inmobiliaria - El Salvador
 */
 
 const CONFIG = {
   whatsapp: "50360014234",
-  mensajeInicial: "Hola, deseo recibir información sobre sus propiedades."
+
+  mensajeInicial:
+`¡Hola, equipo de Elite Inmobiliaria! 👋🏡
+
+Estoy buscando una oportunidad para adquirir una propiedad y me gustaría conocer las opciones que tienen disponibles.
+
+✨ ¿Podrían brindarme información y asesorarme?
+
+¡Muchas gracias! Espero su respuesta. 😊`
 };
 
-// Abrir y cerrar menú móvil
+
+// =====================================
+// MENÚ PARA CELULARES
+// =====================================
+
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -27,15 +39,25 @@ if (menuToggle && navMenu) {
   });
 }
 
-// Preparar enlace de WhatsApp
+
+// =====================================
+// FUNCIÓN GENERAL DE WHATSAPP
+// =====================================
+
 function abrirWhatsApp(mensaje) {
   const numero = CONFIG.whatsapp.replace(/\D/g, "");
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+  const url =
+    `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
-// Burbuja flotante de WhatsApp
+
+// =====================================
+// BURBUJA FLOTANTE DE WHATSAPP
+// =====================================
+
 const whatsappBubble = document.getElementById("whatsappBubble");
 
 if (whatsappBubble) {
@@ -45,24 +67,54 @@ if (whatsappBubble) {
   });
 }
 
-// Botones de cada propiedad
+
+// =====================================
+// MENSAJES PERSONALIZADOS POR PROPIEDAD
+// =====================================
+
 document.querySelectorAll(".property-link").forEach(button => {
+
   button.addEventListener("click", () => {
+
     const propiedad = button.dataset.property;
 
     const mensaje =
-      `Hola, deseo recibir información sobre: ${propiedad}.\n` +
-      "Me gustaría conocer el precio, las medidas, la ubicación y las condiciones disponibles.";
+`¡Hola, Elite Inmobiliaria! 👋🏡
+
+Me llamó mucho la atención esta propiedad:
+
+📍 *${propiedad}*
+
+Me gustaría conocer más detalles y saber qué oportunidades tienen disponibles.
+
+¿Podrían compartirme información sobre:
+
+📌 Ubicación y cómo llegar.
+📐 Medidas del terreno o características de la propiedad.
+💰 Precio y opciones disponibles.
+📄 Condiciones para realizar la compra.
+
+Estoy interesado(a) en conocer esta oportunidad y dar el siguiente paso.
+
+¡Muchas gracias por su atención! 😊`;
 
     abrirWhatsApp(mensaje);
+
   });
+
 });
 
-// Formulario de contacto
+
+// =====================================
+// FORMULARIO DE CONTACTO
+// =====================================
+
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+
   contactForm.addEventListener("submit", event => {
+
     event.preventDefault();
 
     if (!contactForm.reportValidity()) return;
@@ -72,22 +124,37 @@ if (contactForm) {
     const nombre = datos.get("name").trim();
     const telefono = datos.get("phone").trim();
     const interes = datos.get("interest");
-    const objetivo = datos.get("goal") || "No especificado";
-    const mensajeExtra = datos.get("message").trim() || "Sin mensaje adicional";
+    const objetivo = datos.get("goal") || "Todavía estoy explorando opciones";
 
     const mensaje =
-      `Hola, soy ${nombre}.\n\n` +
-      `Mi teléfono: ${telefono}\n` +
-      `Propiedad de interés: ${interes}\n` +
-      `Mi objetivo: ${objetivo}\n` +
-      `Mensaje: ${mensajeExtra}\n\n` +
-      "Me gustaría recibir más información. Gracias.";
+`¡Hola, Elite Inmobiliaria! 👋🏡
+
+Mi nombre es *${nombre}* y estoy interesado(a) en conocer sus opciones inmobiliarias.
+
+✨ *ESTA ES MI CONSULTA*
+
+👤 Nombre: ${nombre}
+📱 Teléfono: ${telefono}
+🏡 Propiedad de interés: ${interes}
+🎯 Lo que busco: ${objetivo}
+
+Me gustaría recibir información detallada para conocer las opciones disponibles y evaluar cuál se adapta mejor a mis planes.
+
+¿Podrían ayudarme con los detalles, precios y ubicación?
+
+¡Muchas gracias por su atención! Será un gusto conversar con ustedes. 😊`;
 
     abrirWhatsApp(mensaje);
+
   });
+
 }
 
-// Año automático
+
+// =====================================
+// AÑO AUTOMÁTICO DEL SITIO
+// =====================================
+
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
